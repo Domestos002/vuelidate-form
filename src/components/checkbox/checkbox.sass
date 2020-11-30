@@ -1,0 +1,44 @@
+.checkbox
+  display: flex
+  align-items: center
+  position: relative
+  &__input
+    opacity: 0
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    margin: 0
+    cursor: pointer
+    z-index: 1
+    &:checked + .checkbox__pic
+      border-color: $black
+      &::before
+        opacity: 1
+  &__pic
+    width: 24px
+    height: 24px
+    display: block
+    border-radius: 2px
+    margin: 0
+    padding: 0
+    border: 1px solid $gray
+    background-color: transparent
+    +trans('border-color')
+    &::before
+      content: ''
+      display: block
+      background-size: 16px 16px
+      background-position: center center
+      background-repeat: no-repeat
+      width: 100%
+      height: 100%
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48Zz48Zz48cGF0aCBkPSJNNTA0LjUwMiw3NS40OTZjLTkuOTk3LTkuOTk4LTI2LjIwNS05Ljk5OC0zNi4yMDQsMEwxNjEuNTk0LDM4Mi4yMDNMNDMuNzAyLDI2NC4zMTFjLTkuOTk3LTkuOTk4LTI2LjIwNS05Ljk5Ny0zNi4yMDQsMGMtOS45OTgsOS45OTctOS45OTgsMjYuMjA1LDAsMzYuMjAzbDEzNS45OTQsMTM1Ljk5MmM5Ljk5NCw5Ljk5NywyNi4yMTQsOS45OSwzNi4yMDQsMEw1MDQuNTAyLDExMS43QzUxNC41LDEwMS43MDMsNTE0LjQ5OSw4NS40OTQsNTA0LjUwMiw3NS40OTZ6Ii8+PC9nPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48L3N2Zz4=)
+      opacity: 0
+  &__label
+    color: $black
+    font-size: 16px
+    margin-left: 10px

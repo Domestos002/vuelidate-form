@@ -1,0 +1,18 @@
+@import "@sass/variables.sass"
+@import "@sass/mixins.sass"
+
+.phone-input
+  display: flex
+  position: relative
+  &__select.custom-selector
+    position: static
+    width: 120px
+    .custom-selector__single
+      border-right: none
+      border-radius: 2px 0 0 2px
+    &.custom-selector--opened + .phone-input__input.input
+      border-left-color: $blue
+      border-bottom-color: transparent
+  &__input.input
+    flex-grow: 1
+    border-radius: 0 2px 2px 0

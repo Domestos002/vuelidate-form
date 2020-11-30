@@ -1,0 +1,18 @@
+@import "@sass/variables.sass"
+@import "@sass/mixins.sass"
+
+.user-form
+  &__btn
+    margin-top: 50px
+  &__title
+    display: block
+    border-bottom: 1px solid $gray
+    padding-bottom: 5px
+    font-size: 25px
+    font-weight: 500
+    color: $black
+    & + .user-form__list
+      margin-top: 35px
+  &__group
+    & + &
+      margin-top: 75px

@@ -1,0 +1,26 @@
+@import "@sass/reset.sass"
+@import "@sass/variables.sass"
+@import "@sass/mixins.sass"
+@import "@sass/grid.sass"
+
+@import "@components/btn/btn.sass"
+@import "@components/checkbox/checkbox.sass"
+@import "@components/input/input.sass"
+@import "@components/form-group/form-group.sass"
+
+
++font("Roboto", "Roboto-Regular", 400)
++font("Roboto", "Roboto-Medium", 500)
+
+body
+  font-family: $font-family-base
+
+.container
+  max-width: 1000px
+  padding: 0 15px
+  margin: 0 auto
+
+.site-wrapper
+  padding: 100px 0
+  +respond-to($large)
+    padding: 50px 0

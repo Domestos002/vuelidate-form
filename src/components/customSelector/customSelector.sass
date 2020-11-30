@@ -1,0 +1,88 @@
+@import "@sass/variables.sass"
+@import "@sass/mixins.sass"
+
+.custom-selector
+  position: relative
+  &--opened
+    .custom-selector
+      &__single
+        border-radius: 2px 2px 0 0
+        border-color: $blue
+        border-bottom-color: transparent
+      &__single-wrapper::after
+        transform: translateY(-50%) rotate(0deg)
+  &__single
+    cursor: pointer
+    height: 44px
+    padding: 0 15px
+    width: 100%
+    margin: 0
+    user-select: none
+    color: $black
+    font-size: 16px
+    border: 1px solid $gray
+    background-color: transparent
+    border-radius: 2px
+    position: relative
+    &:focus
+      outline: none
+  &__single-wrapper
+    position: relative
+    &::after
+      content: ''
+      pointer-events: none
+      width: 44px
+      height: 44px
+      display: block
+      right: 0
+      top: 50%
+      transform: translateY(-50%) rotate(180deg)
+      position: absolute
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjQwLjgzNSAyNDAuODM1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNDAuODM1IDI0MC44MzU7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48Zz48cGF0aCBpZD0iRXhwYW5kX0xlc3MiIGQ9Ik0xMjkuMDA3LDU3LjgxOWMtNC42OC00LjY4LTEyLjQ5OS00LjY4LTE3LjE5MSwwTDMuNTU1LDE2NS44MDNjLTQuNzQsNC43NC00Ljc0LDEyLjQyNywwLDE3LjE1NWM0Ljc0LDQuNzQsMTIuNDM5LDQuNzQsMTcuMTc5LDBsOTkuNjgzLTk5LjQwNmw5OS42NzEsOTkuNDE4YzQuNzUyLDQuNzQsMTIuNDM5LDQuNzQsMTcuMTkxLDBjNC43NC00Ljc0LDQuNzQtMTIuNDI3LDAtMTcuMTU1TDEyOS4wMDcsNTcuODE5eiIvPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48L3N2Zz4=)
+      background-repeat: no-repeat
+      background-size: 15px 15px
+      background-position: 50% 48%
+  &__dropdown
+    z-index: 2
+    position: absolute
+    width: 100%
+    background-color: $white
+    border: 1px solid $blue
+    border-top: none
+    top: 100%
+    border-bottom-left-radius: 2px
+    border-bottom-right-radius: 2px
+    overflow: hidden
+    word-break: break-all
+    will-change: visibility
+  &__filler
+    width: 0
+    height: 0
+    margin: 0
+    top: 0
+    line-height: 0
+  &__list
+    margin: 0
+    padding-left: 0
+    list-style: none
+    position: relative
+    max-height: 300px
+    overflow: auto
+    -webkit-overflow-scrolling: touch
+    will-change: scroll-position
+  &__item
+    width: 100%
+    cursor: pointer
+    color: $black
+    padding: 10px 15px
+    position: relative
+    font-size: 16px
+    user-select: none
+    +trans('background-color')
+    &:hover:not(.custom-selector__item--active)
+      background-color: $lightgrey
+    &--active
+      background-color: $blue
+      color: $white
+      &:hover
+        background-color: lighten($blue,8%)

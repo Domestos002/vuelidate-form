@@ -1,0 +1,20 @@
+.btn
+  display: inline-flex
+  line-height: 42px
+  font-size: 18px
+  text-align: center
+  border-radius: 2px
+  border: 1px solid $gray
+  background-color: transparent
+  padding: 0 15px
+  cursor: pointer
+  +trans('background-color, border-color, color, box-shadow')
+  &--primary
+    background-color: $blue
+    color: $white
+    border-color: $blue
+    &:hover, &:focus, &:active
+      box-shadow: none
+      outline: none
+      background-color: darken($blue, 10%)
+      border-color: darken($blue, 10%)
